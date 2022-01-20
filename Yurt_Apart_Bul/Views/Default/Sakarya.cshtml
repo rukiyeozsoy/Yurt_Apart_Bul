@@ -1,0 +1,140 @@
+﻿@using Yurt_Apart_Bul.Models.Siniflar
+@model List<Sakarya>
+@{
+    ViewBag.Title = "Sakarya";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link href="~/web2/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="~/web2/css/style.css" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Personal Blog Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+        Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:100,400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="indent-left" style="background-color:blanchedalmond">
+        <br /> <br />
+        <div class="container">
+            <div class="col-md-8 single-main">
+                <div class="header_bottom_right_images">
+                    @foreach (var x in Model.Where(x => x.ID == 1))
+                    {
+                        <h3>@x.YurtAd</h3>
+                    }
+                    <br />
+                    <div class="slider" style="width:545px; height:365px;">
+                        <ul class="rslides" id="slider1">
+                            @foreach (var x in Model.Where(x => x.YurtAd == "Asyalı Kampüs Kız Yurdu"))
+                            {
+                                <li><img src="@x.YurtImage"></li>
+                            }
+                        </ul>
+                    </div>
+                    <br />
+                    @foreach (var x in Model.Where(x => x.YurtAd == "Asyalı Kampüs Kız Yurdu"))
+                    {
+                        <p>@x.Aciklama</p>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="indent-left" style="background-color:blanchedalmond">
+        <br /> <br />
+        <div class="container">
+            <div class="col-md-8 single-main">
+                <div class="header_bottom_right_images">
+                    @foreach (var y in Model.Where(y => y.ID == 4))
+                    {
+                        <h3>@y.YurtAd</h3>
+                    }
+                    <br />
+                    <div class="slider" style="width:540px; height:365px;">
+                        <ul class="rslides" id="slider2">
+                            @foreach (var y in Model.Where(y => y.YurtAd == "Adatepe Kız Öğrenci Apartı"))
+                            {
+                                <li><img src="@y.YurtImage"></li>
+                            }
+                        </ul>
+                    </div>
+                    <br />
+                    @foreach (var y in Model.Where(y => y.YurtAd == "Adatepe Kız Öğrenci Apartı"))
+                    {
+                        <p>@y.Aciklama</p>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="indent-left" style="background-color:blanchedalmond">
+        <br /> <br />
+        <div class="container">
+            <div class="col-md-8 single-main">
+                <div class="header_bottom_right_images">
+                    @foreach (var z in Model.Where(z => z.ID == 7))
+                    {
+                        <h3>@z.YurtAd</h3>
+                    }
+                    <br />
+                    <div class="slider" style="width:545px; height:365px;">
+                        <ul class="rslides" id="slider2">
+                            @foreach (var z in Model.Where(z => z.YurtAd == "Akay Erkek Öğrenci Yurdu"))
+                            {
+                                <li><img src="@z.YurtImage"></li>
+                            }
+                        </ul>
+                    </div>
+                    <br />
+                    @foreach (var z in Model.Where(z => z.YurtAd == "Akay Erkek Öğrenci Yurdu"))
+                    {
+                        <p>@z.Aciklama</p>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="indent-left" style="background-color:blanchedalmond">
+            <br /> <br />
+            <div class="container">
+                <div class="col-md-8 single-main">
+                    <div class="header_bottom_right_images">
+                        @foreach (var t in Model.Where(t => t.ID == 10))
+                        {
+                            <h3>@t.YurtAd</h3>
+                        }
+                        <br />
+                        <div class="slider" style="width:640px; height:365px;">
+                            <ul class="rslides" id="slider2">
+                                @foreach (var t in Model.Where(t => t.YurtAd == "Univa Apart"))
+                                {
+                                    <li><img src="@t.YurtImage"></li>
+                                }
+                            </ul>
+                        </div>
+                        <br />
+                        @foreach (var t in Model.Where(t => t.YurtAd == "Univa Apart"))
+                        {
+                            <p>@t.Aciklama</p>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+    </div>
+</body>
+</html>
+

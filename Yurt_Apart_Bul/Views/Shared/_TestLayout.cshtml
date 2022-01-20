@@ -1,0 +1,77 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE HTML>
+<html >
+<head>
+    <title>Yurt/Apart Bul</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="~/web/css/style.css" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="~/web/css/slider.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="~/web/js/jquery.min.js"></script>
+    <script src="~/web/js/responsiveslides.min.js"></script>
+
+    <script>
+        $(function () {
+            $("#slider1").responsiveSlides({
+                auto: true,
+                nav: true,
+                speed: 500,
+                namespace: "callbacks",
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="header">
+            <div class="wrap">
+                <div class="logo"><a href="index.html"><img style="width:150px; height:100px;" src="~/web/images/logo2.png" alt="" /></a></div>
+                <div class="con-right">
+                    <div class="grid1-l-img">
+                        <img src="~/web/images/contact.png" alt="">
+                    </div>
+                    <div class="grid1-l-desc">
+                        <p>Whatsapp : 0555 555 5555</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+
+    <div class="header-bottom">
+        <div class="wrap">
+            <ul id="nav">
+                <li><a href="/About/Index/">Ana Sayfa</a></li>
+
+                <li>
+                    <a class="hsubs" href="/YurtApart/Index/">Yurt/Apart</a>
+                    <ul class="subs">
+                        <li><a href="/YurtApart/Detays/1">Özel Kız Öğrenci Yurdu</a></li>
+                        <li><a href="/YurtApart/Detays/2">Özel Erkek Öğrenci Yurdu</a></li>
+                        <li><a href="/YurtApart/Detays/3">Kız Öğrenci Apart</a></li>
+                        <li><a href="/YurtApart/Detays/4">Erkek Öğrenci Apart</a></li>
+                    </ul>
+                </li>
+                <li><a href="/Default/Index/">Şehirler</a></li>
+                <li><a href="/Default/Index2/">Üniversiteler</a></li>
+                <li><a href="/Admin/Index/">Admin</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class"content">
+        @RenderBody()
+    </div>
+    <div class="footer-bottom">
+        <div class="wrap">
+            <div class="copy">
+                <p>&copy; 2021 Yurt-Apart. Tüm hakları saklıdır | Design by <a href="http://w3layouts.com">W3Layouts</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,15 @@
+﻿@using Yurt_Apart_Bul.Models.Siniflar
+@model List<Sehirler>
+        @foreach (var x in Model)
+        {
+        <div class="right">
+            <div class="bot-left">
+                <img src="@x.SehirImage" style="width:300px; height:150px;" alt="" />
+            </div>
+            <div class="left-text">
+
+            <h4>@x.Baslik</h4>
+            <p>@x.Aciklama</p>
+            </div>
+        </div>
+        }

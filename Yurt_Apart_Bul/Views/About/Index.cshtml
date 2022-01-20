@@ -1,0 +1,48 @@
+﻿@using Yurt_Apart_Bul.Models.Siniflar
+@model List<AnaSayfa>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<div class="header-banner" style="background-color:blanchedalmond">
+    <div class="wrap">
+        <div class="banner">
+            <div class="indent">
+                <h2 class="indent-left margin-bot" style="margin-left:80px">Hakkımızda</h2>
+                <p>Aradığın rahatlığa en hızlı şeklide ulaşmak için Yurt/Apart BUL!</p>
+                <br /> <br />
+                <div class="header_bottom_right_images" style="margin-left:220px">
+                    <div class="slider" style="width:520px; height:365px;">
+                        <ul class="rslides" id="slider1">
+                            @foreach (var x in Model)
+                            {
+                                <li><img src="@x.FotoUrl" alt=""></li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br /> <br /> <br /> <br /> <br /> <br />
+            <br /> <br /> <br /> <br /> <br /> <br />
+            <br /> <br /> <br /> <br /> <br /> <br />
+            <br /> <br /> <br /> <br /> <br /> <br />
+            <h3 style="color:darkred">Vizyonumuz</h3>
+            <br />
+            <p>
+                Günümüzde her yıl binlerce öğrenci bilmediği şehirlerde, alışık olmadığı şartlarda
+                eğitimi için yeni bir şehre yerleşiyor. Yeni bir ortama alışmak zorunda olmak bir yana, kalacak yer de
+                büyük bir problem oluyor. Bizim amacımız öğrencilerin bu problemlerine biraz da olsa yardımcı
+                olmak. Ülke genelinde her şehirde bulunan yurt ve apartların listesini çıkararak bu yurt
+                ve apartların öğrenciye vaatlerini, sunduğu imkanları gibi özelliklerini barındırarak öğrenciye
+                gideceği veya gitmeyi planladığı şehirde büyük bir problem olarak gözüken yer problemini en aza
+                indirmek. Bu sayede öğrenciler sadece gideceği yer belirli olduktan sonra değil
+                tercih döneminde de kalabileceği yerleri araştırarak kendi için daha doğru bir tercih yapabilecek.
+            </p>
+            <div class="clear"></div>
+        </div>
+        <br /> <br /> <br /> <br /> <br /> <br />
+        <br /> <br /> <br /> <br /> <br /> <br />
+        <br /> <br /> <br />
+    </div>
+</div>

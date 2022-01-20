@@ -1,0 +1,28 @@
+﻿@using Yurt_Apart_Bul.Models.Siniflar
+@model List<YurtApart>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yurt/Apart Listesi</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>BAŞLIK</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+    <tr>
+        <td>@x.ID</td>
+        <td>@x.Baslik</td>
+        <td><a href="/Admin/YurtSil/@x.ID" class="btn btn-danger">Sil</a></td>
+        <td><a href="/Admin/YurtGetir/@x.ID" class="btn btn-warning">Güncelle</a></td>
+    </tr>
+    }
+</table>
+<a href="/Admin/YeniYurt/" class="btn btn-primary">Yeni Yurt/Apart</a>
+

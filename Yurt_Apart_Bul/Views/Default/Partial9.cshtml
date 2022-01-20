@@ -1,0 +1,18 @@
+﻿@using Yurt_Apart_Bul.Models.Siniflar
+@model List<Universiteler>
+<div class="padding1">
+    <h4>Favori 6 Üniversite</h4>
+    <div class="box-left">
+        @foreach (var x in Model)
+        {
+            <div class="bot-img">
+                <img src="@x.UniversiteImage" style="width:120px; height:65px;" alt="" />
+            </div>
+            <div class="bot-desc">
+                <p>@x.Aciklama.Substring(0, 75)... </p>
+            </div>
+            <div class="clear"></div>
+        }
+    </div>
+    @Html.Action("Partial10", "Default")
+</div>

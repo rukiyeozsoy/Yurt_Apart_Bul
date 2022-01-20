@@ -1,0 +1,52 @@
+﻿@using Yurt_Apart_Bul.Models.Siniflar
+@model List<Universiteler>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+<!DOCTYPE HTML>
+<html>
+<body>
+    <div class="header-banner" style="background-color:blanchedalmond">
+        <div class="wrap">
+            <div class="banner">
+                <div class="indent">
+                    <h2 class="indent-left margin-bot">Üniversitenin Yakınındaki Yurt ve Apartları en Hızlı Şekilde Bul</h2>
+                    <p>Aradığın rahatlığa en hızlı şekilde ulaşmak okuduğun üniversiteyi BUL!</p>
+                    <br /> <br />
+
+                    <div class="header_bottom_right_images" style="margin-left:150px">
+                        <div class="slider" style="width:650px; height:365px;">
+                            <ul class="rslides" id="slider1">
+                                @foreach (var x in Model)
+                                {
+                                    <li><img src="@x.UniversiteImage" alt=""></li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <br />
+    </div>
+    <div class"content" style="background-color:blanchedalmond">
+        <div class="wrap">
+            <div class="wrapper">
+                @Html.Action("Partial6", "Default")
+                <div class="grids">
+                    <div class="box1">
+                        @Html.Action("Partial8", "Default")
+                        @Html.Action("Partial9", "Default")
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

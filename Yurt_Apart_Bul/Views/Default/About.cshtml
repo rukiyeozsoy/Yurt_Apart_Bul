@@ -1,0 +1,33 @@
+﻿@using Yurt_Apart_Bul.Models.Siniflar
+@model List<AnaSayfa>
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+@*<div class="content">
+        <div class="wrap">
+            <div class="about">
+                <h3>Hakkımızda</h3>
+                <img src="images/about_banner.jpg" alt="" />
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+             </div>
+        </div>
+    </div>*@
+
+
+<div class="header_bottom_right_images" style="margin-left:150px">
+    <div class="about">
+        <h3>Hakkımızda </h3>
+     </div>
+        <div class="slider" style="width:650px; height:365px;">
+            <ul class="rslides" id="slider1">
+                @foreach (var x in Model)
+                {
+                    <li><img src="@x.FotoUrl" alt=""></li>
+                }
+            </ul>
+        </div>
+    </div>
+
+    <div class="clear"></div>

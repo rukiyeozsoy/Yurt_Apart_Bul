@@ -1,0 +1,25 @@
+﻿@model Yurt_Apart_Bul.Models.Siniflar.YurtApart
+@{
+    ViewBag.Title = "YurtGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yurt/Apart Güncelleme</h2>
+<br />
+@using (Html.BeginForm("YurtGuncelle", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.ID)
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control",@readonly="readonly" })
+    <br />
+    @Html.LabelFor(x => x.Baslik)
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.YurtApartUrl)
+    @Html.TextBoxFor(x => x.YurtApartUrl, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Aciklama)
+    @Html.TextAreaFor(x => x.Aciklama,15,1, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Yurt/Apart Güncelle</button>
+}
+
